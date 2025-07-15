@@ -41,7 +41,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-border/50 py-4">
+    <header className="border-b border-gray-200 dark:border-gray-800 py-4">
       <nav className="container mx-auto px-2 md:px-0">
         <div className="flex items-center justify-between">
           {/* dextop  */}
