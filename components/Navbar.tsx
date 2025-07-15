@@ -13,6 +13,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 import { AlignJustifyIcon } from "lucide-react";
 import { Button } from "./ui/button";
@@ -93,8 +94,8 @@ const Navbar = () => {
                   <SheetHeader>
                     <SheetTitle>
                       <ul className="flex flex-col gap-4 mt-5">
-                        {MenuItems.map((item) => (
-                          <li key={item.title}>
+                        {MenuItems.map((item, index: number) => (
+                          <li key={index}>
                             <Link
                               href={item.href}
                               className={cn(
@@ -102,7 +103,7 @@ const Navbar = () => {
                                 pathname === item.href && "text-white"
                               )}
                             >
-                              {item.title}
+                              <SheetClose>{item.title}</SheetClose>
                               {pathname === item.href && (
                                 <motion.div
                                   initial={{ opacity: 0 }}
