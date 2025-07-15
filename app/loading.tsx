@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const LoadingPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center">
       {/* Loading Animation */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -14,7 +14,7 @@ const LoadingPage = () => {
       >
         {/* Main Circle */}
         <motion.div
-          className="w-20 h-20 bg-white rounded-full"
+          className="w-20 h-20 bg-black dark:bg-white rounded-full"
           animate={{
             rotate: 360,
             transition: {
@@ -30,7 +30,7 @@ const LoadingPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="text-white text-3xl font-semibold"
+          className="text-black dark:text-white text-3xl font-semibold"
         >
           Loading...
         </motion.h1>
@@ -48,9 +48,9 @@ const LoadingPage = () => {
             },
           }}
         >
-          <motion.div className="w-4 h-4 bg-white rounded-full" />
-          <motion.div className="w-4 h-4 bg-white rounded-full" />
-          <motion.div className="w-4 h-4 bg-white rounded-full" />
+          <motion.div className="w-4 h-4 bg-black rounded-full dark:bg-white" />
+          <motion.div className="w-4 h-4 bg-black rounded-full dark:bg-white" />
+          <motion.div className="w-4 h-4 bg-black rounded-full dark:bg-white" />
         </motion.div>
       </motion.div>
     </div>
