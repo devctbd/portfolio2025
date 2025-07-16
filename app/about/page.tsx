@@ -108,7 +108,7 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 2.5 }}
+              transition={{ duration: 0.5, delay: 2.6 }}
               className="border bg-accent p-4 rounded-md"
             >
               <h2 className="text-xl font-bold">Backend</h2>

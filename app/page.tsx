@@ -15,9 +15,9 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="min-h-[calc(100vh-6rem)] container mx-auto px-4 md:px-0">
+    <div className="min-h-screen container mx-auto px-4 md:px-0">
       {/* hero section */}
-      <section className="lg:grid lg:h-[calc(100vh-6rem)] lg:place-content-center">
+      <section className="lg:grid lg:h-[calc(100vh-20rem)] lg:place-content-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
