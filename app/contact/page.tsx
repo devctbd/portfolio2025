@@ -138,14 +138,14 @@ export default function ContactUs() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, delay: 1, ease: "easeInOut" }}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center h-[400px] w-full"
           >
             <Image
               src="/contact.webp"
               alt="Contact"
               width={500}
               height={500}
-              className="object-cover rounded-md"
+              className="object-cover rounded-md w-full h-full"
               priority
             />
           </motion.div>

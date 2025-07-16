@@ -49,7 +49,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 1 }}
               className="text-2xl font-bold"
             >
-              Minarul Islam
+              Minarul
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -71,7 +71,9 @@ const About = () => {
             >
               <Button variant="outline">Download CV</Button>
               <Button variant="outline">
-                <Link href="/contact">Hire Me</Link>
+                <Link href="https://www.fiverr.com/sungreat_it" target="_blank">
+                  Hire Me on Fiverr
+                </Link>
               </Button>
             </motion.div>
           </div>

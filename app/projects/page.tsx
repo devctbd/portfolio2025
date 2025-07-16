@@ -123,6 +123,18 @@ const Projects = () => {
           </Card>
         </motion.div>
       </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        className="flex justify-center py-5 mt-10"
+      >
+        <Button variant="outline" asChild>
+          <Link href="https://www.youtube.com/@devctme" target="_blank">
+            View More on YouTube
+          </Link>
+        </Button>
+      </motion.div>
     </div>
   );
 };
