@@ -5,6 +5,15 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { motion } from "framer-motion";
 
 export default function ContactUs() {
   const form = useRef<HTMLFormElement>(null);
@@ -31,7 +40,24 @@ export default function ContactUs() {
 
   return (
     <div className="container mx-auto px-2 md:px-0">
-      <div className="min-h-screen flex items-center justify-center">
+      <Breadcrumb className="mb-5 py-5">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>Contact</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="min-h-screen flex items-center justify-center"
+      >
         <div className="w-full max-w-2xl p-6 shadow-md rounded-md mt-5 border border-gray-200 dark:border-gray-800">
           <h2 className="text-3xl font-bold mt-10 mb-5">Contact Us</h2>
           <form className="space-y-4" ref={form} onSubmit={sendEmail}>
@@ -91,7 +117,7 @@ export default function ContactUs() {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

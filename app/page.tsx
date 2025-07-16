@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -6,40 +7,67 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
     <div className="min-h-[calc(100vh-6rem)] container mx-auto px-4 md:px-0">
       {/* hero section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-5 lg:py-20">
-        <div>
-          <h2 className="text-4xl font-bold mb-5">Hello, I'm Minarul Islam</h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            Creative Web Developer
-          </p>
-          <p className="text-gray-600 dark:text-gray-400">
-            I'm a web developer with a passion for creating beautiful and
-            functional websites. I have experience with a variety of
-            technologies and frameworks, and I'm always learning new things to
-            improve my skills.
-          </p>
-          <Button className="mt-5" variant="outline">
-            <Link href="/projects">View My Work</Link>
-          </Button>
-        </div>
-        <div className="flex items-center justify-center">
-          <Image
-            src="/hero.webp"
-            alt="Profile"
-            width={500}
-            height={500}
-            className="object-cover rounded-md"
-          />
-        </div>
-      </div>
+      <section className="lg:grid lg:h-[calc(100vh-6rem)] lg:place-content-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32"
+        >
+          <div className="mx-auto max-w-prose text-center">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-4xl font-bold text-gray-900 sm:text-5xl dark:text-white px-5 py-5 leading-14"
+            >
+              your website will be{" "}
+              <strong className="text-indigo-600">ready</strong> in 24 hours
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed dark:text-gray-200 px-5"
+            >
+              I'm a web developer with a passion for creating beautiful and
+              functional websites. I have experience with a variety of
+              technologies and frameworks, and I'm always learning new things to
+              improve my skills.
+            </motion.p>
+
+            <div className="mt-4 flex justify-center gap-4 sm:mt-6">
+              <Link
+                className="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
+                href="/contact"
+              >
+                Get Started
+              </Link>
+
+              <Link
+                className="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-white"
+                href="/projects"
+              >
+                View Projects
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </section>
       {/* service section */}
       <div className="py-5 lg:py-20">
         <div className="flex flex-col gap-2">
@@ -58,6 +86,7 @@ const Home = () => {
                 width={500}
                 height={500}
                 className="object-cover rounded-md"
+                priority
               />
               <h2 className="text-2xl font-bold">Ecommerce Website</h2>
             </CardHeader>
@@ -83,6 +112,7 @@ const Home = () => {
                 width={500}
                 height={500}
                 className="object-cover rounded-md"
+                priority
               />
               <h2 className="text-2xl font-bold">Blog Website</h2>
             </CardHeader>
@@ -107,6 +137,7 @@ const Home = () => {
                 width={500}
                 height={500}
                 className="object-cover rounded-md"
+                priority
               />
               <h2 className="text-2xl font-bold">Portfolio Website</h2>
             </CardHeader>
@@ -131,8 +162,9 @@ const Home = () => {
                 width={500}
                 height={500}
                 className="object-cover rounded-md"
+                priority
               />
-              <h2 className="text-2xl font-bold">UI/UX Design</h2>
+              <h2 className="text-2xl font-bold">Landing Page</h2>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 dark:text-gray-400">
